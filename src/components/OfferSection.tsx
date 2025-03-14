@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const OfferSection = () => {
   return (
-    <section id="offer" className="section-padding bg-gradient-to-b from-white to-secondary/30">
+    <section id="offer" className="section-padding bg-gradient-to-b from-white to-secondary/30 broken-dreams-overlay torn-edge-top">
       <div className="container-padding">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -40,11 +40,20 @@ const OfferSection = () => {
               <img 
                 src="/ebook-cover.jpg" 
                 alt="Capa do e-book A Verdade Sobre os Leilões dos EUA" 
-                className="w-full h-auto rounded-2xl shadow-2xl border-8 border-white"
+                className="w-full h-auto rounded-2xl shadow-2xl border-8 border-white vintage-filter"
               />
               <div className="absolute -bottom-4 -right-4 bg-warning text-primary text-sm font-bold py-2 px-4 rounded-full shadow-lg z-10 -rotate-12">
                 REVELADOR
               </div>
+              
+              {/* Torn paper effect */}
+              <div className="absolute -bottom-1 left-0 w-full h-8 bg-white rounded-bl-2xl rounded-br-2xl"></div>
+              
+              {/* Fake coffee stain */}
+              <div className="absolute bottom-24 right-8 w-16 h-16 rounded-full bg-gradient-to-r from-amber-800/10 to-amber-700/20 blur-md rotate-12"></div>
+              
+              {/* Thumbtack effect */}
+              <div className="absolute top-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-gray-400 rounded-full shadow-md"></div>
             </div>
           </motion.div>
           
@@ -75,7 +84,7 @@ const OfferSection = () => {
               ))}
             </ul>
             
-            <div className="mb-8">
+            <div className="mb-8 glass-card p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xl font-semibold line-through text-foreground/60">De $197</span>
                 <span className="bg-danger/10 text-danger text-xs px-2 py-1 rounded-full font-semibold">50% OFF</span>
@@ -107,7 +116,7 @@ const OfferSection = () => {
           <h3 className="text-2xl font-bold text-center mb-10">Bônus Exclusivos</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4">
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4 folded-corner">
               <div className="bg-accent/10 p-3 rounded-lg self-start">
                 <Shield className="w-8 h-8 text-accent" />
               </div>
@@ -119,7 +128,7 @@ const OfferSection = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4">
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4 folded-corner">
               <div className="bg-accent/10 p-3 rounded-lg self-start">
                 <BookOpen className="w-8 h-8 text-accent" />
               </div>
@@ -131,7 +140,7 @@ const OfferSection = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4">
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4 folded-corner">
               <div className="bg-accent/10 p-3 rounded-lg self-start">
                 <AudioLines className="w-8 h-8 text-accent" />
               </div>
@@ -143,7 +152,7 @@ const OfferSection = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4">
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-secondary flex gap-4 folded-corner">
               <div className="bg-accent/10 p-3 rounded-lg self-start">
                 <Users className="w-8 h-8 text-accent" />
               </div>

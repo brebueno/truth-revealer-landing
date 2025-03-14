@@ -13,12 +13,6 @@ import PaymentSection from '../components/PaymentSection';
 import FooterSection from '../components/FooterSection';
 import ExitPopup from '../components/ExitPopup';
 
-// Import framer-motion
-<lov-add-dependency>framer-motion@latest</lov-add-dependency>
-
-// Import lucide-react icons we'll be using
-<lov-add-dependency>@radix-ui/react-toast@1.1.4</lov-add-dependency>
-
 const Index = () => {
   // Add lazy loading for images
   useEffect(() => {
