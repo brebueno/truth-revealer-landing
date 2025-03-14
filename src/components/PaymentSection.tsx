@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ShieldCheck, CreditCard, CheckCircle } from 'lucide-react';
+import { ShieldCheck, CreditCard, CheckCircle, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const PaymentSection = () => {
