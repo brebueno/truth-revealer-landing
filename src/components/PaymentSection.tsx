@@ -2,8 +2,14 @@
 import React from 'react';
 import { ShieldCheck, CreditCard, CheckCircle, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Button } from './ui/button';
 
 const PaymentSection = () => {
+  const handleCheckout = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = 'https://pay.kirvano.com/a6d8629d-53d0-4ef9-a51a-dea61dc63b01';
+  };
+
   return (
     <section id="payment" className="section-padding bg-gradient-to-b from-white to-secondary/30">
       <div className="container-padding">
@@ -81,44 +87,33 @@ const PaymentSection = () => {
               <h3 className="text-xl font-bold">Checkout Seguro</h3>
             </div>
             
-            <form className="space-y-4 flex-grow">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">Nome completo</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  className="w-full p-3 border border-secondary rounded-lg"
-                  placeholder="Seu nome completo"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">E-mail</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full p-3 border border-secondary rounded-lg"
-                  placeholder="seu@email.com"
-                  required
-                />
-              </div>
-              
-              <div className="bg-primary/5 p-4 rounded-lg">
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium">Total:</span>
-                  <span className="font-bold">$97.00</span>
-                </div>
-                <button 
-                  type="submit" 
-                  className="w-full cta-button"
-                >
-                  FINALIZAR COMPRA
-                </button>
-              </div>
-            </form>
+            <Button 
+              onClick={handleCheckout}
+              className="w-full p-4 bg-primary hover:bg-primary/90 text-white font-bold text-lg rounded-lg shadow-lg transition-all mb-6"
+            >
+              FINALIZAR COMPRA AGORA
+            </Button>
             
-            <div className="mt-6 text-center">
+            <div className="text-center my-4">
+              <p className="text-sm text-muted-foreground">Você será redirecionado para uma página segura de pagamento</p>
+            </div>
+            
+            <div className="p-4 bg-muted/20 rounded-lg mb-6">
+              <div className="flex justify-between mb-1">
+                <span className="font-medium">Produto:</span>
+                <span>E-book + Bônus</span>
+              </div>
+              <div className="flex justify-between mb-1">
+                <span className="font-medium">Preço normal:</span>
+                <span className="line-through">$197.00</span>
+              </div>
+              <div className="flex justify-between font-bold">
+                <span>Total hoje:</span>
+                <span>$97.00</span>
+              </div>
+            </div>
+            
+            <div className="mt-auto text-center">
               <div className="flex justify-center mb-2">
                 <ShieldCheck className="w-5 h-5 text-primary" />
               </div>
